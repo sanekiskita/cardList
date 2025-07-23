@@ -5,8 +5,8 @@ export interface Todo {
     completed: boolean,
     todo: string,
     userId: number,
-}
+};
 
 export interface responseTodos extends response {
     todos: Todo[],
-}
+};

@@ -1,5 +1,5 @@
-import { ref } from 'vue'
-import { defineStore } from 'pinia'
+import { ref } from 'vue';
+import { defineStore } from 'pinia';
 
 const useCounterStore = defineStore('load', () => {
   const load = ref(false);
@@ -12,7 +12,7 @@ const useCounterStore = defineStore('load', () => {
     load.value = false;
   }
 
-  return { load, loadStart, loadStop }
+  return { load, loadStart, loadStop };
 })
 
 export default useCounterStore;

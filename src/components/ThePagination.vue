@@ -10,8 +10,8 @@
     }>();
 
     const emit = defineEmits<{
-        (e: 'update:modelValue', value: number): void
-    }>()
+        (e: 'update:modelValue', value: number): void,
+    }>();
 
     const FIRST_CHAR = '<<';
     const LEFT_CHAR = '<';
@@ -25,7 +25,7 @@
             return;
         }
 
-        viewPage.value = window.innerWidth > 900 ? countViewPageM : countViewPageS
+        viewPage.value = window.innerWidth > 900 ? countViewPageM : countViewPageS;
     }
 
     setCountViewPage();

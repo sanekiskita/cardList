@@ -10,7 +10,7 @@
 <template>
     <TheCard class="card_todo"
         :class="{
-            __completed: card.completed
+            __completed: card.completed,
         }"
     >
         <template #header>

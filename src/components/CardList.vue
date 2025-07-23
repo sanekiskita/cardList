@@ -35,7 +35,7 @@
     const Api = new ApiDummyjson();
 
     const setCardInfo = async () => {
-        const { CARD_LIMIT } = config
+        const { CARD_LIMIT } = config;
 
         load.loadStart();
 
