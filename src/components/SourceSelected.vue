@@ -11,7 +11,14 @@
     });
 
     watch(selectedSource, (newEl: string ) => {
-        router.push({name: newEl, params: {page: route.params.page || 1}});
+        router.push({
+            name: newEl,
+            params: {
+                page: newEl === String(route.name)
+                ? (route.params.page || 1)
+                : 1,
+            }
+        });
     });
 </script>
 

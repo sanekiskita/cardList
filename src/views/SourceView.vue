@@ -7,8 +7,8 @@
   const curRoute = useRoute();
   const router = useRouter();
 
-  const type: Ref<string|'todos'|'quotes'> = ref('todos');
-  const selectedPage = ref(1);
+  const type: Ref<string|'todos'|'quotes'> = ref(String(curRoute.name));
+  const selectedPage = ref(+curRoute.params?.page || 1);
 
   watch(selectedPage, (newVal) => {
     router.push({params: {page: `${newVal}`}});
