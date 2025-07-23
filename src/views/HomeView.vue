@@ -1,9 +1,6 @@
-<script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
-</script>
-
 <template>
   <main>
-    <TheWelcome />
+    <h1>Отображение карточек</h1>
+    <p>Выберите источник для отображния карточек</p>
   </main>
 </template>
