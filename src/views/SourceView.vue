@@ -126,24 +126,8 @@
       flex: 1;
     }
 
-    .card {
-      border-radius: 20px;
-      padding: 1em 0.5em;
-      border-color: var(--bg-revert);
-      background-color: var(--bg-dop);
-      box-shadow: 5px 5px 5px var(--bg-dark);
-      transition: all 0.3s ease;
-      transform: translateY(0);
-    }
-
     .__empty {
       grid-column: 1 / -1;
       text-align: center;
-    }
-
-    .card:hover {
-      transform: translateY(-2px) translateX(-2px);
-      border-color: var(--bg-hover);
-      box-shadow: 10px 10px 10px var(--bg-dark);
     }
 </style>

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+    import TheCard from './TheCard.vue';
     import type { Todo } from '../interface/ITodos';
 
     const { card } = defineProps<{
@@ -7,21 +8,21 @@
 </script>
 
 <template>
-    <div class="card_todo"
+    <TheCard class="card_todo"
         :class="{
             __completed: card.completed
         }"
     >
-        <div class="card_todo__header">
+        <template #header>
             <h3>Задача {{card.id}}</h3>
             <p>Пользователь: {{card.userId}}</p>
             <p>Статус: {{card.completed ? 'Завершена' : 'В процессе'}}</p>
-        </div>
-        <div class="card_todo__content">
+        </template>
+        <template #content>
             <p>{{card.todo}}</p>
             
-        </div>
-    </div>
+        </template>
+    </TheCard>
 </template>
 
 <style scoped lang="css">
