@@ -55,6 +55,12 @@
 
     watch(() => type, () => {
         source.value = null;
+
+        if (selectedPage !== 1) {
+            emit('update:modelValue', 1);
+            return;
+        }
+
         setCardInfo();
     });
 
