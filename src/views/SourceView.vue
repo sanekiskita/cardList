@@ -5,7 +5,7 @@
   import type { responseQuotes, Quote } from '../interface/IQuotes';
   import type { responseTodos,  Todo} from '../interface/ITodos';
 
-  import api from '../services/api';
+  import ApiDummyjson from '../services/ApiDummyjson';
   import config from '../configs/config';
   import loadStore from '../stores/load'
 
@@ -28,12 +28,14 @@
   const selectedPage = ref(1);
   const source: Ref<null|responseTodos|responseQuotes> = ref(null);
 
+  const Api = new ApiDummyjson();
+
   const setSourse = async () => {
     const { CARD_LIMIT } = config
 
     load.loadStart();
     try {
-      source.value = await api.get(type.value, selectedPage.value);
+      source.value = await Api.get(ApiDummyjson.getUrlForGet(type.value, selectedPage.value));
     } catch (errorCode) {
       alert(errorCode);
       return;
