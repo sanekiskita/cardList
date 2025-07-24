@@ -54,11 +54,19 @@
     };
 
     watch(() => type, () => {
+        if (source.value === null) {
+            return;
+        }
+
         source.value = null;
         setCardInfo();
     });
 
     watch(() => selectedPage, () => {
+        if (source.value === null) {
+            return;
+        }
+
         source.value = null;
         setCardInfo();
     });
